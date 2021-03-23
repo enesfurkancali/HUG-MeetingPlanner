@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="doodleluDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLKULLANICI">
+    <Key>
+      <PropertyRef Name="kullaniciad" />
+    </Key>
+    <Property Name="kullaniciad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLTOPLANTI">
+    <Key>
+      <PropertyRef Name="topad" />
+    </Key>
+    <Property Name="topad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="toptarih1" Type="varchar" MaxLength="50" />
+    <Property Name="toptarih2" Type="varchar" MaxLength="50" />
+    <Property Name="toptarih3" Type="varchar" MaxLength="50" />
+    <Property Name="platform" Type="varchar" MaxLength="50" />
+    <Property Name="davetli1" Type="varchar" MaxLength="50" />
+    <Property Name="davetli2" Type="varchar" MaxLength="50" />
+    <Property Name="davetli3" Type="varchar" MaxLength="50" />
+    <Property Name="davetli4" Type="varchar" MaxLength="50" />
+    <Property Name="davetli5" Type="varchar" MaxLength="50" />
+    <Property Name="davetli6" Type="varchar" MaxLength="50" />
+    <Property Name="davetli7" Type="varchar" MaxLength="50" />
+    <Property Name="davetli8" Type="varchar" MaxLength="50" />
+    <Property Name="davetli9" Type="varchar" MaxLength="50" />
+    <Property Name="davetli10" Type="varchar" MaxLength="50" />
+    <Property Name="davetciad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="davetli" Type="int" />
+    <Property Name="notlar" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_TBLTOPLANTI_TBLTOPLANTI">
+    <End Role="TBLKULLANICI" Type="Self.TBLKULLANICI" Multiplicity="1" />
+    <End Role="TBLTOPLANTI" Type="Self.TBLTOPLANTI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKULLANICI">
+        <PropertyRef Name="kullaniciad" />
+      </Principal>
+      <Dependent Role="TBLTOPLANTI">
+        <PropertyRef Name="davetciad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="doodleluDBModelStoreContainer">
+    <EntitySet Name="TBLKULLANICI" EntityType="Self.TBLKULLANICI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLTOPLANTI" EntityType="Self.TBLTOPLANTI" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLTOPLANTI_TBLTOPLANTI" Association="Self.FK_TBLTOPLANTI_TBLTOPLANTI">
+      <End Role="TBLKULLANICI" EntitySet="TBLKULLANICI" />
+      <End Role="TBLTOPLANTI" EntitySet="TBLTOPLANTI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

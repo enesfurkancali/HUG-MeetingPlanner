@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HugDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLKULLANICI">
+    <Key>
+      <PropertyRef Name="kullaniciad" />
+    </Key>
+    <Property Name="kullaniciad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TBLTOPLANTI" Relationship="Self.FK_TBLTOPLANTI_TBLTOPLANTI" FromRole="TBLKULLANICI" ToRole="TBLTOPLANTI" />
+  </EntityType>
+  <EntityType Name="TBLTOPLANTI">
+    <Key>
+      <PropertyRef Name="topad" />
+    </Key>
+    <Property Name="topad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="toptarih1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="platform" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetli1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetli2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetli3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetli4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetli5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="davetciad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="davetli" Type="Int32" />
+    <Property Name="notlar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLKULLANICI" Relationship="Self.FK_TBLTOPLANTI_TBLTOPLANTI" FromRole="TBLTOPLANTI" ToRole="TBLKULLANICI" />
+  </EntityType>
+  <Association Name="FK_TBLTOPLANTI_TBLTOPLANTI">
+    <End Role="TBLKULLANICI" Type="Self.TBLKULLANICI" Multiplicity="1" />
+    <End Role="TBLTOPLANTI" Type="Self.TBLTOPLANTI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKULLANICI">
+        <PropertyRef Name="kullaniciad" />
+      </Principal>
+      <Dependent Role="TBLTOPLANTI">
+        <PropertyRef Name="davetciad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HugDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLKULLANICI" EntityType="Self.TBLKULLANICI" />
+    <EntitySet Name="TBLTOPLANTI" EntityType="Self.TBLTOPLANTI" />
+    <AssociationSet Name="FK_TBLTOPLANTI_TBLTOPLANTI" Association="Self.FK_TBLTOPLANTI_TBLTOPLANTI">
+      <End Role="TBLKULLANICI" EntitySet="TBLKULLANICI" />
+      <End Role="TBLTOPLANTI" EntitySet="TBLTOPLANTI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="doodleluDBModelStoreContainer" CdmEntityContainer="doodleluDBEntities3">
+    <EntitySetMapping Name="TBLKULLANICI">
+      <EntityTypeMapping TypeName="doodleluDBModel.TBLKULLANICI">
+        <MappingFragment StoreEntitySet="TBLKULLANICI">
+          <ScalarProperty Name="kullaniciad" ColumnName="kullaniciad" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLTOPLANTI">
+      <EntityTypeMapping TypeName="doodleluDBModel.TBLTOPLANTI">
+        <MappingFragment StoreEntitySet="TBLTOPLANTI">
+          <ScalarProperty Name="topad" ColumnName="topad" />
+          <ScalarProperty Name="toptarih1" ColumnName="toptarih1" />
+          <ScalarProperty Name="toptarih2" ColumnName="toptarih2" />
+          <ScalarProperty Name="toptarih3" ColumnName="toptarih3" />
+          <ScalarProperty Name="platform" ColumnName="platform" />
+          <ScalarProperty Name="davetli1" ColumnName="davetli1" />
+          <ScalarProperty Name="davetli2" ColumnName="davetli2" />
+          <ScalarProperty Name="davetli3" ColumnName="davetli3" />
+          <ScalarProperty Name="davetli4" ColumnName="davetli4" />
+          <ScalarProperty Name="davetli5" ColumnName="davetli5" />
+          <ScalarProperty Name="davetli6" ColumnName="davetli6" />
+          <ScalarProperty Name="davetli7" ColumnName="davetli7" />
+          <ScalarProperty Name="davetli8" ColumnName="davetli8" />
+          <ScalarProperty Name="davetli9" ColumnName="davetli9" />
+          <ScalarProperty Name="davetli10" ColumnName="davetli10" />
+          <ScalarProperty Name="davetciad" ColumnName="davetciad" />
+          <ScalarProperty Name="davetli" ColumnName="davetli" />
+          <ScalarProperty Name="notlar" ColumnName="notlar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
