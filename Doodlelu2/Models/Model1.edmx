@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HugDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLKULLANICI">
+          <Key>
+            <PropertyRef Name="kullaniciad" />
+          </Key>
+          <Property Name="kullaniciad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sifre" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBLTOPLANTI">
+          <Key>
+            <PropertyRef Name="topad" />
+          </Key>
+          <Property Name="topad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="toptarih1" Type="varchar" MaxLength="50" />
+          <Property Name="platform" Type="varchar" MaxLength="50" />
+          <Property Name="davetli1" Type="varchar" MaxLength="50" />
+          <Property Name="davetli2" Type="varchar" MaxLength="50" />
+          <Property Name="davetli3" Type="varchar" MaxLength="50" />
+          <Property Name="davetli4" Type="varchar" MaxLength="50" />
+          <Property Name="davetli5" Type="varchar" MaxLength="50" />
+          <Property Name="davetciad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="davetli" Type="int" />
+          <Property Name="notlar" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_TBLTOPLANTI_TBLTOPLANTI">
+          <End Role="TBLKULLANICI" Type="Self.TBLKULLANICI" Multiplicity="1" />
+          <End Role="TBLTOPLANTI" Type="Self.TBLTOPLANTI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLKULLANICI">
+              <PropertyRef Name="kullaniciad" />
+            </Principal>
+            <Dependent Role="TBLTOPLANTI">
+              <PropertyRef Name="davetciad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HugDBModelStoreContainer">
+          <EntitySet Name="TBLKULLANICI" EntityType="Self.TBLKULLANICI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLTOPLANTI" EntityType="Self.TBLTOPLANTI" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBLTOPLANTI_TBLTOPLANTI" Association="Self.FK_TBLTOPLANTI_TBLTOPLANTI">
+            <End Role="TBLKULLANICI" EntitySet="TBLKULLANICI" />
+            <End Role="TBLTOPLANTI" EntitySet="TBLTOPLANTI" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HugDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBLKULLANICI">
+          <Key>
+            <PropertyRef Name="kullaniciad" />
+          </Key>
+          <Property Name="kullaniciad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TBLTOPLANTI" Relationship="Self.FK_TBLTOPLANTI_TBLTOPLANTI" FromRole="TBLKULLANICI" ToRole="TBLTOPLANTI" />
+        </EntityType>
+        <EntityType Name="TBLTOPLANTI">
+          <Key>
+            <PropertyRef Name="topad" />
+          </Key>
+          <Property Name="topad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="toptarih1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="platform" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetli1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetli2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetli3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetli4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetli5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="davetciad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="davetli" Type="Int32" />
+          <Property Name="notlar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLKULLANICI" Relationship="Self.FK_TBLTOPLANTI_TBLTOPLANTI" FromRole="TBLTOPLANTI" ToRole="TBLKULLANICI" />
+        </EntityType>
+        <Association Name="FK_TBLTOPLANTI_TBLTOPLANTI">
+          <End Role="TBLKULLANICI" Type="Self.TBLKULLANICI" Multiplicity="1" />
+          <End Role="TBLTOPLANTI" Type="Self.TBLTOPLANTI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLKULLANICI">
+              <PropertyRef Name="kullaniciad" />
+            </Principal>
+            <Dependent Role="TBLTOPLANTI">
+              <PropertyRef Name="davetciad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HugDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLKULLANICI" EntityType="Self.TBLKULLANICI" />
+          <EntitySet Name="TBLTOPLANTI" EntityType="Self.TBLTOPLANTI" />
+          <AssociationSet Name="FK_TBLTOPLANTI_TBLTOPLANTI" Association="Self.FK_TBLTOPLANTI_TBLTOPLANTI">
+            <End Role="TBLKULLANICI" EntitySet="TBLKULLANICI" />
+            <End Role="TBLTOPLANTI" EntitySet="TBLTOPLANTI" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HugDBModelStoreContainer" CdmEntityContainer="HugDBEntities">
+          <EntitySetMapping Name="TBLKULLANICI">
+            <EntityTypeMapping TypeName="HugDBModel.TBLKULLANICI">
+              <MappingFragment StoreEntitySet="TBLKULLANICI">
+                <ScalarProperty Name="kullaniciad" ColumnName="kullaniciad" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLTOPLANTI">
+            <EntityTypeMapping TypeName="HugDBModel.TBLTOPLANTI">
+              <MappingFragment StoreEntitySet="TBLTOPLANTI">
+                <ScalarProperty Name="topad" ColumnName="topad" />
+                <ScalarProperty Name="toptarih1" ColumnName="toptarih1" />
+                <ScalarProperty Name="platform" ColumnName="platform" />
+                <ScalarProperty Name="davetli1" ColumnName="davetli1" />
+                <ScalarProperty Name="davetli2" ColumnName="davetli2" />
+                <ScalarProperty Name="davetli3" ColumnName="davetli3" />
+                <ScalarProperty Name="davetli4" ColumnName="davetli4" />
+                <ScalarProperty Name="davetli5" ColumnName="davetli5" />
+                <ScalarProperty Name="davetciad" ColumnName="davetciad" />
+                <ScalarProperty Name="davetli" ColumnName="davetli" />
+                <ScalarProperty Name="notlar" ColumnName="notlar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
