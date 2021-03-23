@@ -1,0 +1,145 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HUG</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link href="~/Content/fullcalendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style type="text/css">
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+            font-size: 14px;
+        }
+
+        #calendar {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #wrap {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .closeBtn {
+            border-radius: 5px;
+        }
+
+        td.fc-day.fc-past {
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+ 
+    <a class="navbar-brand" style="position: absolute; top: 10px; left: 30px;" href="@Url.Action("Homepage","Home")"><img src="~/Content/Images/logoo.png" width="100" height="100" /></a>
+
+    <form id="calendar" action="@Url.Action("Calendar","Meeting")" method="@FormMethod.Post">
+
+        <div>
+            <input type="hidden" id="davetciad" class="form-control" name="davetciad" value="@HttpContext.Current.User.Identity.Name" required>
+
+            <input type="hidden" id="tarih1" name="toptarih1">
+            <button class="btn btn-primary btn-lg" id="btn1" style="position:absolute; top:30px; right:10px; background:#717ED4; " type="submit">&#160;&#160;&#160;İleri &raquo;&#160;&#160;&#160;</button>
+        </div>
+        <script>
+            $('#btn1').click(function () {
+                alert("Toplantı Başarıyla Oluşturuldu. Katılımcılara mail gönderildi.");
+
+            });
+        </script>
+
+    </form>
+
+    <script src="~/Scripts/jquery-2.0.0.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script src="~/Scripts/fullcalendar/fullcalendar.min.js"></script>
+    <script src="~/Scripts/fullcalendar/locale/tr.js"></script>
+    <script src="~/Scripts/fullcalendar/locale-all.js"></script>
+    <script>
+        document.getElementById("tarih1").value = "a";
+
+        var i = 1;
+
+        $(document).ready(function () {
+            $("#calendar").fullCalendar({
+                header: {
+                    left: "prev,next today",
+                    center: "title",
+                    right: "month,agendaWeek,agendaDay"
+                },
+                defaultView: "month",
+                navLinks: true, // can click day/week names to navigate views
+                selectable: true,
+                selectHelper: false,
+                timeZone: 'UTC',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                select: function (start, end) {
+                    var title = "Meeting";
+                    var eventData;
+                    if (title) {
+                        eventData = {
+                            title: title,
+                            start: start,
+                            end: end
+                        };
+                        var now = new Date();
+                        if (start._d - now <= 0) {
+                            alert("Geçmiş ve şimdiki zaman tarihini seçemezsiniz.");
+                            $('#calendar').fullCalendar('removeEvents', userEventIds);
+
+                        }
+                        if (document.getElementById("tarih1").value.valueOf() != "a".valueOf()) {
+                            //alert("En fazla 1 tarih secebilirsiniz")
+                            $('#calendar').fullCalendar('removeEvents', event._id);
+                        }
+                        $("#calendar").fullCalendar("renderEvent", eventData, true); // stick? = true
+                    }
+                    $("#calendar").fullCalendar("unselect");
+                    var bas = eventData.start._d.toISOString().slice(0, -8).replace("T", " ")
+                    var bitis = eventData.end._d.toISOString().slice(0, -8).replace("T", " ")
+                    var tum = bas + " / " + bitis
+                    i = 1;
+                    if (document.getElementById("tarih1").value.valueOf() == "a".valueOf()) {
+                        document.getElementById("tarih1").value = tum;
+                    }
+
+
+
+                },
+                eventRender: function (event, element) {
+                    element
+                        .find(".fc-content")
+                        .prepend("<span class='closeBtn material-icons'>x</span>");
+                    element.find(".closeBtn").on("click", function () {
+                        $("#calendar").fullCalendar("removeEvents", event._id);
+                        var bas2 = event.start._d.toISOString().slice(0, -8).replace("T", " ")
+                        var bitis2 = event.end._d.toISOString().slice(0, -8).replace("T", " ")
+                        var tum2 = bas2 + " / " + bitis2
+                        var k = 1
+                        console.log("Silinen deger : ", tum2)
+                        for (k = 1; k < 4; k++) {
+                            if (document.getElementById("tarih" + k).value.valueOf() == tum2.valueOf()) {
+                                document.getElementById("tarih" + k).value = "a";
+                            }
+                        }
+                    });
+
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

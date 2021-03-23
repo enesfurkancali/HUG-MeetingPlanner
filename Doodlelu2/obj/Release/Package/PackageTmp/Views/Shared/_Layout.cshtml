@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background: #fafafa;">
+    <nav class="navbar navbar-default" style="background: #e8eaf6">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-form" href="@Url.Action("Homepage","Home")"><img src="~/Content/Images/logoo.png" width="75" height="70" /></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-form ">
+                <li><a href="@Url.Action("About","Home")" style="font-size:medium">Hakkımızda</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-form ">
+                <li><a href="@Url.Action("Index","List")" style="font-size:medium">Toplantılarım</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right navbar-form">
+                <button class="btn btn-danger navbar-btn" onclick="location.href='@Url.Action("Create","Meeting")'">Toplantı Düzenle</button>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right navbar-form">
+                <li><a href="@Url.Action("Logout","Security")"><span class="glyphicon glyphicon-log-out"> </span>  Çıkış Yap</a></li>
+
+            </ul>
+
+
+        </div>
+    </nav>
+
+    @RenderBody()
+    <script src="~/Scripts/JavaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿
+@using Doodlelu2.Models
+@model List<TBLTOPLANTI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+
+    <table class="table table-striped">
+        <tr class="danger">
+            <th>Toplantı Adı</th>
+            <th>Toplantı Tarihi</th>
+            <th>Platform</th>
+            <th>Davetli Sayısı</th>
+            <th>Davetliler</th>
+            <th>Notlar</th>
+            <th></th>
+        </tr>
+
+        <tbody class="active">
+            @foreach (var tplnt in Model)
+            {
+                if (@HttpContext.Current.User.Identity.Name == tplnt.davetciad)
+                {
+                    <tr>
+                        <th>
+                            @tplnt.topad
+                        </th>
+                        <td>
+                            @tplnt.toptarih1
+                        </td>
+                        <td>@tplnt.platform</td>
+                        <td>@tplnt.davetli</td>
+                        <td>
+                            @tplnt.davetli1 <br />
+                            @tplnt.davetli2 <br />
+                            @tplnt.davetli3 <br />
+                            @tplnt.davetli4 <br />
+                            @tplnt.davetli5 <br />
+                        </td>
+                        <td style="width: 200px; word-break: break-word; ">@tplnt.notlar</td>
+                        <td><a href="@Url.Action("Delete","List",new { ad= tplnt.topad})" title="Toplantıyı Sil" id="sil"><img src="~/Content/Images/trash.png" width="40" height="40" /></a></td>
+
+
+                    </tr>
+
+                }
+
+
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+</div>

@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Homepage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main role="main">
+    <div class="jumbotron" style="background:#fafafa; ">
+        <div class="container">
+            <center><img src="~/Content/Images/logoo.png" width="200" height="200" /></center>
+            <center>
+                <br />
+                <p>HUG toplantılarınızı planlayabileceğiniz bir sistemdir. HUG ile katılımcılara davet gönderebilir, toplantılarınızı zahmetsizce oluşturabilirsiniz.</p>
+                <p><a class="btn btn-primary btn-lg" style="background:#717ED4" href="@Url.Action("Create","Meeting")" role="button">Toplantı Oluştur &raquo;</a></p>
+            </center>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <center>
+                    <img src="~/Content/Images/checklist.png" width="50" height="50" />
+                    <h2>Etkinlik Oluşturun</h2>
+                    <p>Bir toplantı oluşturun. Bu toplantıyı planlayın (proje adı, açıklaması, konumu vb.)</p>
+                </center>
+            </div>
+
+            <div class="col-md-4">
+                <center>
+                    <img src="~/Content/Images/calendar.png" width="50" height="50" />
+                    <h2>Zaman Dilimi Belirleyin</h2>
+
+                    <p>
+                        Bu zaman dilimi farklı şekillerde
+                        seçilebilir:<br />
+                        Arka arkaya seçilmiş günler <br />
+                        Belirli seçilmiş günler <br />
+                        Bir gün içindeki saatler <br />
+                        Farklı günlerdeki saatler
+                    </p>
+                </center>
+            </div>
+            <div class="col-md-4">
+                <center>
+                    <img src="~/Content/Images/mail.png" width="50" height="50" />
+                    <h2>Katılımcılara Davet Gönderin</h2>
+
+                    <p>HUG sizin yerinize katılımcıların e-posta adreslerine davet gönderir. HUG ile toplantı düzenlemek işte bu kadar kolay.</p>
+                </center>
+            </div>
+        </div>
+
+        <hr />
+
+    </div>
+
+</main>
+<footer class="container">
+    <p>&copy; @DateTime.Now.Year - HUG</p>
+</footer>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../../../assets/js/vendor/popper.min.js"></script>
+<script src="../../../../dist/js/bootstrap.min.js"></script>
+
