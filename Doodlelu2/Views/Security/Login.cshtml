@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<form class="form-signin" id='form1' action="@Url.Action("Login","Security")" method="@FormMethod.Post">
+    <div class="text-center mb-4">
+        <a href="@Url.Action("Index","Home")"><img class="mb-4" src="~/Content/Images/logoo.png" alt="logo.png" width="200" height="200"></a>
+        <h1 class="h3 mb-3 font-weight-normal">Giriş Yap</h1>
+    </div>
+    <div class="text-danger">
+        @ViewBag.ErrorMessage
+    </div>
+    <br />
+
+
+
+    <div class="form-group">
+        <input type="email" id="mail" name="mail" class="form-control" placeholder="E-Posta" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <input type="password" id="sifre" name="sifre" class="form-control" placeholder="Şifre" required>
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="rememberme" value="remember-me"> Beni Hatırla
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" style="background:#717ED4" type="submit">Giriş Yap</button> <br />
+    <center><a href="@Url.Action("Signup","Register")">HUG'a Kaydol</a></center>
+    <br />
+    <p class="mt-5 mb-3 text-muted text-center">&copy; HUG</p>
+</form>
+

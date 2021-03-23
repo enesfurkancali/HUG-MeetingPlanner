@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<form class="form-signin" id='form1' action="@Url.Action("Signup","Register")" method="@FormMethod.Post">
+    <div class="text-center mb-4">
+        <a href="@Url.Action("Index","Home")"><img class="mb-4" src="~/Content/Images/logoo.png" alt="logoo.png" width="200" height="200"></a>
+        <h1 class="h3 mb-3 font-weight-normal">Kaydol</h1>
+    </div>
+    <div class="text-danger">
+        @ViewBag.Message
+    </div>
+    <br />
+
+    <div class="form-group">
+        <input type="text" id="kullaniciad" name="kullaniciad" class="form-control" placeholder="Kullanıcı Adı*" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="mail" class="form-control" name="mail" placeholder="E-Posta*" required autofocus>
+    </div>
+    <fieldset>
+        <div class="form-group">
+            <input type="password" id="sifre" name="sifre" class="form-control" placeholder="Şifre*" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="sifrekontrol" name="sifrekontrol" class="form-control" placeholder="Şifre(Tekrar)*" required>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" style="background:#717ED4" type="submit" onclick="validatePassword();">Kaydol</button> <br />
+    </fieldset> 
+    <center><a href="@Url.Action("Login","Security")">HUG'a Giriş Yap</a></center>
+    <br />
+    <p class="mt-5 mb-3 text-muted text-center">&copy; HUG</p>
+</form>
+
