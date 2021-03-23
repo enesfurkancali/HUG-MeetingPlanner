@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\enesf\Desktop\website</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Doodlelu2.dll">
+      <publishTime>03/22/2021 00:04:07</publishTime>
+    </File>
+    <File Include="bin/Doodlelu2.pdb">
+      <publishTime>03/22/2021 00:04:07</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 14:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.Helpers.resources.dll">
+      <publishTime>11/28/2018 13:04:48</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.Mvc.resources.dll">
+      <publishTime>11/28/2018 13:00:10</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.Optimization.resources.dll">
+      <publishTime>02/11/2014 15:28:44</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.Razor.resources.dll">
+      <publishTime>11/28/2018 13:00:34</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>11/28/2018 13:04:48</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>11/28/2018 13:04:48</publishTime>
+    </File>
+    <File Include="bin/tr/System.Web.WebPages.resources.dll">
+      <publishTime>11/28/2018 13:04:48</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 12:57:34</publishTime>
+    </File>
+    <File Include="Content/album.css">
+      <publishTime>01/14/2021 21:01:54</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="Content/floating-labels.css">
+      <publishTime>01/12/2021 23:09:06</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.css">
+      <publishTime>01/13/2021 19:29:27</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.min.css">
+      <publishTime>01/13/2021 19:29:27</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.print.css">
+      <publishTime>01/13/2021 19:29:27</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.print.min.css">
+      <publishTime>01/13/2021 19:29:27</publishTime>
+    </File>
+    <File Include="Content/Images/calendar.png">
+      <publishTime>01/11/2021 19:17:50</publishTime>
+    </File>
+    <File Include="Content/Images/checklist.png">
+      <publishTime>01/11/2021 19:17:50</publishTime>
+    </File>
+    <File Include="Content/Images/EFC.jpg">
+      <publishTime>01/14/2021 22:11:00</publishTime>
+    </File>
+    <File Include="Content/Images/github.png">
+      <publishTime>03/20/2021 22:47:44</publishTime>
+    </File>
+    <File Include="Content/Images/gmail.png">
+      <publishTime>03/20/2021 22:47:44</publishTime>
+    </File>
+    <File Include="Content/Images/logoo.png">
+      <publishTime>03/15/2021 22:07:30</publishTime>
+    </File>
+    <File Include="Content/Images/mail.png">
+      <publishTime>01/11/2021 19:17:50</publishTime>
+    </File>
+    <File Include="Content/Images/MK.jpg">
+      <publishTime>01/14/2021 23:21:25</publishTime>
+    </File>
+    <File Include="Content/Images/trash.png">
+      <publishTime>03/21/2021 15:18:45</publishTime>
+    </File>
+    <File Include="Content/Images/twitter.png">
+      <publishTime>03/20/2021 22:45:08</publishTime>
+    </File>
+    <File Include="Content/jumbotron.css">
+      <publishTime>01/11/2021 19:13:32</publishTime>
+    </File>
+    <File Include="Content/pricing.css">
+      <publishTime>01/14/2021 21:48:18</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/11/2021 19:09:18</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/15/2021 22:59:37</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/11/2021 19:09:18</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>03/20/2021 23:43:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>01/11/2021 19:09:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/fullcalendar.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/fullcalendar.min.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/gcal.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/gcal.min.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale-all.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/af.js">
+      <publishTime>01/13/2021 19:29:26</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-dz.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-kw.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-ly.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-ma.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-sa.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar-tn.js">
+      <publishTime>01/13/2021 19:29:25</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ar.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/bg.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/bs.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ca.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/cs.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/da.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/de-at.js">
+      <publishTime>01/13/2021 19:29:24</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/de-ch.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/de.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/el.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/en-au.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/en-ca.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/en-gb.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/en-ie.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/en-nz.js">
+      <publishTime>01/13/2021 19:29:23</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/es-do.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/es-us.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/es.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/et.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/eu.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/fa.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/fi.js">
+      <publishTime>01/13/2021 19:29:22</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/fr-ca.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/fr-ch.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/fr.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/gl.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/he.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/hi.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/hr.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/hu.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/id.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/is.js">
+      <publishTime>01/13/2021 19:29:21</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/it.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ja.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ka.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/kk.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ko.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/lb.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/lt.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/lv.js">
+      <publishTime>01/13/2021 19:29:20</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/mk.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ms-my.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ms.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/nb.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/nl-be.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/nl.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/nn.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/pl.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/pt-br.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/pt.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ro.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/ru.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sk.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sl.js">
+      <publishTime>01/13/2021 19:29:19</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sq.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sr-cyrl.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sr.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/sv.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/th.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/tr.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/uk.js">
+      <publishTime>01/13/2021 19:29:18</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/vi.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/zh-cn.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar/locale/zh-tw.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/holder.min.js">
+      <publishTime>01/14/2021 21:04:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>01/11/2021 19:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>01/11/2021 19:09:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>01/11/2021 19:09:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>01/11/2021 19:09:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>01/11/2021 19:09:26</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>01/11/2021 19:09:25</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>01/13/2021 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>01/13/2021 19:29:16</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js">
+      <publishTime>01/11/2021 23:28:27</publishTime>
+    </File>
+    <File Include="Scripts/sifrekontrol.js">
+      <publishTime>01/11/2021 19:17:01</publishTime>
+    </File>
+    <File Include="Views/Calendar/Index.cshtml">
+      <publishTime>03/21/2021 14:05:42</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>03/20/2021 23:30:00</publishTime>
+    </File>
+    <File Include="Views/Home/Homepage.cshtml">
+      <publishTime>03/15/2021 22:48:31</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/15/2021 23:04:56</publishTime>
+    </File>
+    <File Include="Views/List/Index.cshtml">
+      <publishTime>03/21/2021 17:02:19</publishTime>
+    </File>
+    <File Include="Views/Meeting/Create.cshtml">
+      <publishTime>03/21/2021 14:58:15</publishTime>
+    </File>
+    <File Include="Views/Meeting/Invite.cshtml">
+      <publishTime>03/15/2021 23:30:12</publishTime>
+    </File>
+    <File Include="Views/Register/Signup.cshtml">
+      <publishTime>03/21/2021 14:56:47</publishTime>
+    </File>
+    <File Include="Views/Security/Login.cshtml">
+      <publishTime>03/15/2021 22:20:21</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>01/11/2021 19:09:18</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/20/2021 23:51:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout2.cshtml">
+      <publishTime>03/15/2021 23:01:05</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/11/2021 19:09:18</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/11/2021 19:09:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/22/2021 00:04:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
